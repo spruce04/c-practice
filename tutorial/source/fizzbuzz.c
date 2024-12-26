@@ -20,8 +20,12 @@ int main() {
     int chosen;
     printf("Enter a number: ");
     scanf("%d", &chosen);
-    const char* result = fizzbuzz(chosen);
-    printf("%d %s\n", chosen, result);
+    
+    //loop up to the chosen number
+    for (int i = 1; i <= chosen; i++) {
+        const char* result = fizzbuzz(chosen);
+        printf("%d %s\n", i, fizzbuzz(i));
+    }
 
     return 0;
 }
